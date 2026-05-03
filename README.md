@@ -1,3 +1,3 @@
-#Morning Brief 
+# Morning Brief 
 
 Morning Brief is an AI-driven platform that eliminates chaotic mornings by turning scattered information into a single daily story. It combines weather, calendar events, traffic, news, and alerts into one clear, personalized message delivered via text or email.
