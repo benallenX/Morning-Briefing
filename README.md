@@ -1,2 +1,1 @@
-# Morning-Briefing
-Morning Brief is an AI-driven platform that delivers a daily tasks. It tracks user-defined tasks, reminders, and alerts, then sends clear, actionable updates via text or email so users understand what matters and what to do next.
+#Morning Brief is an AI-driven platform that eliminates chaotic mornings by turning scattered information into a single daily story. It combines weather, calendar events, traffic, news, and alerts into one clear, personalized message delivered via text or email.
