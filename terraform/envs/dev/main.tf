@@ -27,11 +27,10 @@ resource "azurerm_storage_account" "main" {
   location                 = azurerm_resource_group.main.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
-  
-    static_website {
-    index_document = "index.html"
-  }
+
+  static_website {
+  index_document     = "index.html"
+}
 
   tags = var.tags
 }
-
