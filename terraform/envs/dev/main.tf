@@ -4,11 +4,19 @@ terraform {
       source  = "hashicorp/azurerm"
       version = "=4.1.0"
     }
+    random = {
+      source  = "hashicorp/random"
+      version = "~> 3.6"
+    }
   }
 }
 
 provider "azurerm" {
-  features {}
+  features {
+    resource_group {
+      prevent_deletion_if_contains_resources = false
+    }
+  }
 
   subscription_id = var.subscription_id
 }
@@ -29,8 +37,8 @@ resource "azurerm_storage_account" "main" {
   account_replication_type = "LRS"
 
   static_website {
-  index_document     = "index.html"
-}
+    index_document = "index.html"
+  }
 
   tags = var.tags
 }
