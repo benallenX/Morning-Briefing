@@ -4,7 +4,7 @@ variable "project_name" {
 
 variable "location" {
   type    = string
-  default = "East US"
+  default = "East US 2"
 }
 
 variable "subscription_id" {
