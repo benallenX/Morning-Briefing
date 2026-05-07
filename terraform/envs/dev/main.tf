@@ -42,3 +42,11 @@ resource "azurerm_storage_account" "main" {
 
   tags = var.tags
 }
+
+data "azurerm_client_config" "current" {}
+
+resource "azurerm_key_vault_secret" "db_password" {
+  name         = "db-password"
+  value        = random_password.sql_admin.result
+  key_vault_id = azurerm_key_vault.main.id
+}
