@@ -21,3 +21,15 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
+
+# Secrets / keys
+keys/
+*.pem
+id_rsa
+id_rsa.*
+id_ed25519
+id_ed25519.*
+
+# Terraform plan files (may contain secrets)
+*.tfplan
+*.tfplan.*

@@ -42,6 +42,10 @@ resource "azurerm_windows_virtual_machine" "web_vm" {
     azurerm_network_interface.web_nic.id
   ]
 
+   identity {
+    type = "SystemAssigned"
+  }
+
   os_disk {
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
@@ -53,6 +57,7 @@ resource "azurerm_windows_virtual_machine" "web_vm" {
     sku       = "2022-datacenter-azure-edition"
     version   = "latest"
   }
+  tags = var.tags
 }
 
 output "vm_admin_username" {
