@@ -47,6 +47,18 @@ resource "azurerm_network_security_group" "main" {
     source_address_prefix      = "168.9.22.248/32"
     destination_address_prefix = "*"
   }
+
+  security_rule {
+    name                       = "Allow-RDP-Home"
+    priority                   = 111
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_port_range          = "*"
+    destination_port_range     = "3389"
+    source_address_prefix      = "76.145.213.176/32"
+    destination_address_prefix = "*"
+  }
 }
 
 resource "azurerm_subnet_network_security_group_association" "public_assoc" {
