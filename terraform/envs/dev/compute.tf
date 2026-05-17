@@ -42,7 +42,7 @@ resource "azurerm_windows_virtual_machine" "web_vm" {
     azurerm_network_interface.web_nic.id
   ]
 
-   identity {
+  identity {
     type = "SystemAssigned"
   }
 
